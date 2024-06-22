@@ -9,7 +9,7 @@ def generate_linear_recursive(k):
     
   return result
 
-# generate_linear_recursive(6)  
+# print(generate_linear_recursive(6))
 
 #  print sequence of 1,2,3,.. k numbers
 def generate_linear_sequence(k):
