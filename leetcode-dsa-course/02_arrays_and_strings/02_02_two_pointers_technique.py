@@ -65,4 +65,4 @@ def isSubsequence(s: str, t: str) -> bool:
     return i == len(s)
 
 
-print(isSubsequence("tig", "tiger"))
+# print(isSubsequence("tig", "tiger"))
