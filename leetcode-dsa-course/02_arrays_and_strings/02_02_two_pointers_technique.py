@@ -1,3 +1,6 @@
+from typing import List
+
+
 def isPalindrome (input):
   left = 0
   right = len(input) - 1
@@ -67,7 +70,7 @@ def isSubsequence(s: str, t: str) -> bool:
 
 # print(isSubsequence("tig", "tiger"))
 
-def reverseString(s: list[str]) -> list:
+def reverseString(s: List[str]) -> list:
   """
   Do not return anything, modify s in-place instead.
   """
@@ -83,4 +86,31 @@ def reverseString(s: list[str]) -> list:
     
   return s   
 
-print(reverseString(['h','e','l','l','o']))
+# print(reverseString(['h','e','l','l','o']))
+
+def sortedSquares(nums: List[int]) -> list[int]:
+    n = len(nums)
+    left = 0
+    right = n - 1
+    result = [0] * n
+    for i in range(n - 1, -1, -1):
+        if abs(nums[left]) < abs(nums[right]):
+            num = nums[right]
+            right -= 1
+        else:
+            num = nums[left]
+            left += 1
+        result[i] = num * num
+    # below will also work    
+    # while left <= right:
+    #     if abs(nums[left]) < abs(nums[right]):
+    #         num = nums[right]
+    #         result[right] = num * num
+    #         right -= 1
+    #     else:
+    #         num = nums[left]
+    #         result[right - left] = num * num
+    #         left += 1    
+    return result
+
+print(sortedSquares([-3,-2,-1,4,5,6]))
