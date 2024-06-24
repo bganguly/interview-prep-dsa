@@ -105,7 +105,7 @@ def sortedSquares(nums: List[int]) -> list[int]:
     # while left <= right:
     #     if abs(nums[left]) < abs(nums[right]):
     #         num = nums[right]
-    #         result[right] = num * num
+    #         result[right - left] = num * num
     #         right -= 1
     #     else:
     #         num = nums[left]
@@ -113,4 +113,4 @@ def sortedSquares(nums: List[int]) -> list[int]:
     #         left += 1    
     return result
 
-print(sortedSquares([-3,-2,-1,4,5,6]))
+print(sortedSquares([-4,-1,0,3,10]))
