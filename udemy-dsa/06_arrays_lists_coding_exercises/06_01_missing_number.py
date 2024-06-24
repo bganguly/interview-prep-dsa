@@ -18,7 +18,7 @@ print(missing_number([1, 2, 3, 4, 6], 6))
 # Write a function to find the indices of elements whose sum add to a given array.
 # Example
 # two_sum([1, 2, 3, 4, 6], 5) # (1,,4)
-# NOT RECOMMENDED: uses extra space
+# NOT RECOMMENDED: uses extra space | use two pointers instead
 def two_sum(nums, target):
     seen = {}
     for i, num in enumerate(nums):
