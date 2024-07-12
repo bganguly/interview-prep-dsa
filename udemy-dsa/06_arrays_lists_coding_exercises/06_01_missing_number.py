@@ -13,8 +13,7 @@ def missing_number(arr, n):
 
 print(missing_number([1, 2, 3, 4, 6], 6))
 
-# coding exercise 2: leetcode #1 
-# pairs- two sum
+# pairs- two sum: ;eetcode #1
 # find indices of numbers (in an array) that add to a target number
 # Write a function to find the indices of elements whose sum add to a given array.
 # Example
