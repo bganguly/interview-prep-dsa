@@ -1,4 +1,5 @@
 # coding exercise 1: 
+
 # missing number
 # Write a function to find the missing number in a given integer array of 1 to 100.
 # Example
@@ -6,19 +7,18 @@
 # arr of natural numbers potentially sorted
 # n is one more than the number of elemnts in arr
 def missing_number(arr, n):
-    # TODO
     sum_of_n_numbers = n * (n+1)/2
     sum_of_elements_in_arr = sum(arr)
     return sum_of_n_numbers - sum_of_elements_in_arr
 
 print(missing_number([1, 2, 3, 4, 6], 6))
 
+# coding exercise 2: leetcode #1 
 # pairs- two sum
 # find indices of numbers (in an array) that add to a target number
 # Write a function to find the indices of elements whose sum add to a given array.
 # Example
 # two_sum([1, 2, 3, 4, 6], 5) # (1,,4)
-# NOT RECOMMENDED: uses extra space | use two pointers instead
 def two_sum(nums, target):
     seen = {}
     for i, num in enumerate(nums):
