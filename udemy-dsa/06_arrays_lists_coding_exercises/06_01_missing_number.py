@@ -7,15 +7,14 @@ import numpy as np
 # missing number
 # Write a function to find the missing number in a given integer array of 1 to 100.
 # Example
-# missing_number([1, 2, 3, 4, 6], 6) # 5
-# arr of natural numbers potentially sorted
-# n is one more than the number of elemnts in arr
-def missing_number(arr, n):
+# missing_number([1, 2, 4, 5]) # 3
+def missing_number(arr):
+    n = len(arr) + 1
     sum_of_n_numbers = n * (n+1)/2
     sum_of_elements_in_arr = sum(arr)
     return sum_of_n_numbers - sum_of_elements_in_arr
 
-print(f"Missing number is: {missing_number([1, 2, 3, 4, 6], 6)}")
+print(f"Missing number is: {missing_number([1, 2, 4, 5])}")
 
 # question 2
 # pairs- two sum: leetcode #1
@@ -39,6 +38,9 @@ print()
 
 # question 3
 # check if element exist in array
+# Write a function to find index of alement (in an array) that matches a provided value.
+# Example
+# find(np.array([1, 2, 3]), 3) # 'value 3 found at index 2'
 def find(array, value):
   """ Returns a tuple is_error, input_is_not_array, value_is_not_number, value_found, index_found """
   if type(array) == np.ndarray and array.size > 1:
